@@ -1,0 +1,274 @@
+/* Fonts */
+@font-face {
+  font-family: SpartanMB-Bold;
+  src: url(../fonts/spartan-mb/SpartanMB-Bold.otf);    
+}
+@font-face {
+  font-family: SpartanMB-Regular;
+  src: url(../fonts/spartan-mb/SpartanMB-Regular.otf);    
+}
+@font-face {
+  font-family: SpartanMB-Thin;
+  src: url(../fonts/spartan-mb/SpartanMB-Thin.otf);    
+}
+@font-face {
+  font-family: Quantico-Regular;
+  src: url(../fonts/Quantico/Quantico-Regular.ttf);    
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.SAM{
+  background-color: white;
+  border: 2px solid black;
+  color: green;
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px 30px;
+  cursor: pointer;
+}
+html, body {
+  text-align: center;
+}
+#bg-page {
+  background: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+.bg-overlay {
+  position: relative;
+  z-index: 1;
+}
+.bg-overlay::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(31, 31, 88);
+  background: -webkit-linear-gradient(top, #2f133b, rgb(31, 31, 88));
+  background: -o-linear-gradient(top, #2f133b, rgb(31, 31, 88));
+  background: -moz-linear-gradient(top, #2f133b, rgb(31, 31, 88));
+  background: linear-gradient(top, #2f133b, rgb(31, 31, 88));
+  opacity: 0.8;
+}
+header {
+  display: block;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+header img {
+  width: 20%;
+  height: 20%;
+}
+h3 {
+  font-family: SpartanMB-Thin;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 8px;
+  font-size: 40px;
+}
+h4{
+  color: white;
+}
+/* Countdown Timer */
+#countTim {
+  font-family: Quantico-Regular;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  padding-top: 90px;
+  padding-bottom: 200px;
+}
+#countTim ul {
+  position: relative;
+  float: unset;
+  margin: 3px;
+  width: 90px;
+  height: 120px;
+  font-size: 36px;
+  font-weight: unset;
+  line-height: unset;
+  border-radius: 10px;
+  background: #000;
+}
+#countTim ul li {
+  line-height: unset;
+}
+#countTim ul li a div {
+  outline: none;
+}
+#countTim ul li a div div.inn {
+  color: #fff;
+  font-size: 120px;
+  font-weight: unset;
+  text-align: unset;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 200%;
+  text-shadow: 0 0px 0px #000;
+  background-color: #000;
+  border-radius: 10px;
+}
+#countTim ul li a div .shadow {
+  border-radius: 10px;
+}
+#countTim ul li a div.up:after {
+  display: none;
+}
+.flip-clock-divider {
+  display: block;
+  float: unset;
+  position: relative;
+  width: 60px;
+  height: 120px;
+}
+.flip-clock-divider span {
+  display: none;
+}
+.flip-clock-divider::before {
+  content: ':';
+  color: #fff;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.flip-clock-divider.days::before {
+  display: none;
+}
+.flip-clock-divider::after {
+  font-family: SpartanMB-Bold;
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  width: 190px;
+  top: 100%;
+  left: 100%;
+  padding-top: 20px;
+}
+.flip-clock-divider.days::after {
+  content: 'days';
+}
+.flip-clock-divider.hours::after {
+  content: 'hours';
+}
+.flip-clock-divider.minutes::after {
+  content: 'minutes';
+}
+.flip-clock-divider.seconds::after {
+  content: 'seconds';
+}
+
+#socials {
+  padding-bottom: 60px;
+}
+.social-link {
+  color: #fff;
+  padding: 5px;
+}
+.social-link:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media all and (max-width: 840px) {
+  header img {
+    height: 50%;
+    width: 50%;
+  } 
+  #countTim {
+    margin-left: -4px;
+  }
+  #countTim ul {
+    height: 100px; 
+    width: 60px; 
+  }
+  #countTim ul li a div div.inn {
+    font-size: 95px;
+  }
+  .flip-clock-divider {
+    width: 40px;
+    height: 100px;
+  }
+  .flip-clock-divider::before {
+    font-size: 90px;
+  }
+  .flip-clock-divider::after {
+    margin-left: -25px;
+  }
+}
+@media all and (max-width: 576px) {
+  #countTim ul {
+    height: 50px; 
+    width: 30px; 
+    border-radius: 5px; 
+  }
+  #countTim ul li a div div.inn {
+    font-size: 50px;
+    border-radius: 5px;
+  }
+  .flip-clock-divider {
+    width: 10px;
+    height: 50px;
+  }
+  .flip-clock-divider::before {
+    font-size: 45px;
+  }
+  .flip-clock-divider::after {
+    width: 10px;
+    font-size: 12px;
+    margin-left: 20px;
+    padding-top: 10px;
+  }
+  .flip-clock-divider.hours::after {
+    content: 'hrs';
+  }
+  .flip-clock-divider.minutes::after {
+    content: 'mins';
+  }
+  .flip-clock-divider.seconds::after {
+    content: 'secs';
+  }
+}
+@media all and (max-width: 320px) {
+  #countTim ul {
+    width: 26px;
+    border-radius: 3px;
+  }
+  #countTim ul li a div div.inn {
+    font-size: 45px;
+    border-radius: 3px;
+  }
+  .flip-clock-divider::after {
+    margin-left: 15px;
+    padding-top: 8px;
+  }
+}
