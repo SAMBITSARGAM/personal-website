@@ -3,7 +3,7 @@ $(document).ready(function() {
   // Grab the current date
   let timeNow = new Date();
   // Target future date/24 hour time/Timezone
-  let deadline = moment.tz("2022-06-20 00:00", "Asia/Kolkata");
+  let deadline = moment.tz("2022-07-20 00:00", "Asia/Kolkata");
   // Calculate the difference in seconds between the future and current date
   let diff = deadline / 1000 - timeNow.getTime() / 1000;
   // Countdown timer
